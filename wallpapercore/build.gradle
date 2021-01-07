@@ -33,7 +33,7 @@ android {
     }
 }
 
-group = 'dev.jetlaunch.wallpapercore'
+group = 'com.github.MasterJada'
 
 dependencies {
 
