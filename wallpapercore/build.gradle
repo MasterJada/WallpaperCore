@@ -38,9 +38,9 @@ afterEvaluate {
         publications {
             release(MavenPublication) {
                 from components.release
-                groupId = 'com.github.MasterJada'
-//                artifactId = 'WallpaperCore'
-//                version = '1.0'
+                groupId = 'dev.jetlaunch.wallpapercore'
+                artifactId = 'lib'
+                version = '1.0'
             }
         }
     }
