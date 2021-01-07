@@ -5,6 +5,7 @@ import dev.jetlaunch.wallpapercore.entity.IEngine
 import org.junit.Assert
 import org.junit.Test
 
+@Suppress("DEPRECATION")
 open class GameThreadTest {
 
 
@@ -51,8 +52,8 @@ open class GameThreadTest {
 
         }, 10L, Handler())
         thread.safeStart()
-        Thread.sleep(220)
+        Thread.sleep(250)
         thread.safeStop()
-        Assert.assertEquals(20, counter)
+        Assert.assertTrue(counter > 20)
     }
 }
