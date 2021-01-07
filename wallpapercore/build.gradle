@@ -38,8 +38,8 @@ afterEvaluate {
         publications {
             release(MavenPublication) {
                 from components.release
-                groupId = 'dev.jetlaunch.wallpapercore'
-                artifactId = 'lib'
+                groupId = 'dev.jetlaunch'
+                artifactId = 'wallpapercore'
                 version = '1.0'
             }
         }
