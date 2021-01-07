@@ -1,5 +1,6 @@
 package dev.jetlaunch.wallpapercore.utils
 
+
 import kotlin.random.Random
 
 object Randomizer {

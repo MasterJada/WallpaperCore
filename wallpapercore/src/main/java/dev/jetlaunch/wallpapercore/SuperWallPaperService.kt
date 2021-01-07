@@ -1,6 +1,7 @@
 package dev.jetlaunch.wallpapercore
 
 import android.service.wallpaper.WallpaperService
+import android.view.MotionEvent
 import android.view.SurfaceHolder
 import androidx.annotation.CallSuper
 import dev.jetlaunch.wallpapercore.entity.IEngine
@@ -54,7 +55,7 @@ abstract class SuperWallPaperService: WallpaperService() {
          * @param elapseTime: time for which thread sleep before next call @{link IEngine#drawFrame() }.
          */
         protected fun createGameThread(engine: IEngine, elapseTime: Long = 10L): GameThread {
-          return GameThread(engine, elapseTime)
+            return GameThread(engine, elapseTime)
         }
 
         //region overridet methods
@@ -86,6 +87,10 @@ abstract class SuperWallPaperService: WallpaperService() {
             super.onSurfaceChanged(holder, format, width, height)
             if (width > 0 && height > 0)
                 onSizeChanged(width, height)
+        }
+
+        override fun onTouchEvent(event: MotionEvent?) {
+            mScene.onTouchEvent(event)
         }
 
 
