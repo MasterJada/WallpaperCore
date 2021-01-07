@@ -71,7 +71,7 @@ In xml need create new xml config file:
     />
 ```
 ##### Scene 
-Scene must be extended from (SuperScene)[../blob/master/wallpapercore/src/main/java/dev/jetlaunch/wallpapercore/SuperScene.kt]. It's simple holder for layers and need to update each of them and keep in right order:
+Scene must be extended from [SuperScene](../blob/master/wallpapercore/src/main/java/dev/jetlaunch/wallpapercore/SuperScene.kt). It's simple holder for layers and need to update each of them and keep in right order:
 ```kotlin
 class SampleScene: SuperScene() {
     override fun setupLayers() {
